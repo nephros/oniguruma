@@ -6,17 +6,15 @@ Group: Development/Libraries
 License: BSD
 URL: https://github.com/kkos/oniguruma
 SCM: https://github.com/kkos/oniguruma
-Macros:
-    - 'short_name;onig'
 Sources:
-    - '%{short_name}-%{version}.tar.gz'
+    - '%{name}-%{version}.tar.gz'
 #Requires:
 #    - ^^^
 PkgBR:
     - cmake
 #PkgConfigBR:
 #    - ^^^
-SetupOptions: '-q -n %{short_name}-%{version}/upstream'
+SetupOptions: '-q -n %{name}-%{version}/upstream'
 
 NoFiles: true
 

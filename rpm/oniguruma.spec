@@ -7,7 +7,6 @@ Name:       oniguruma
 
 # >> macros
 # << macros
-%define short_name onig
 
 Summary:    A modern and flexible regular expressions library
 Version:    6.9.7.1
@@ -15,7 +14,7 @@ Release:    1
 Group:      Development/Libraries
 License:    BSD
 URL:        https://github.com/kkos/oniguruma
-Source0:    %{short_name}-%{version}.tar.gz
+Source0:    %{name}-%{version}.tar.gz
 Source100:  oniguruma.yaml
 BuildRequires:  cmake
 
@@ -40,7 +39,7 @@ Requires(postun): /sbin/ldconfig
 %{summary}.
 
 %prep
-%setup -q -n %{short_name}-%{version}/upstream
+%setup -q -n %{name}-%{version}/upstream
 
 # >> setup
 # << setup
