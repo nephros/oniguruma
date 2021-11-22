@@ -16,7 +16,7 @@ PkgBR:
     - cmake
 #PkgConfigBR:
 #    - ^^^
-SetupOptions: '-q -n %{short_name}-%{version}'
+SetupOptions: '-q -n %{short_name}-%{version}/upstream'
 
 NoFiles: true
 

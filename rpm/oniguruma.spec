@@ -10,7 +10,7 @@ Name:       oniguruma
 %define short_name onig
 
 Summary:    A modern and flexible regular expressions library
-Version:    6.9.6
+Version:    6.9.7.1
 Release:    1
 Group:      Development/Libraries
 License:    BSD
@@ -40,7 +40,7 @@ Requires(postun): /sbin/ldconfig
 %{summary}.
 
 %prep
-%setup -q -n %{short_name}-%{version}
+%setup -q -n %{short_name}-%{version}/upstream
 
 # >> setup
 # << setup
