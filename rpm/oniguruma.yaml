@@ -1,0 +1,42 @@
+Name: oniguruma
+Summary: A modern and flexible regular expressions library
+Version: 6.9.7.1
+Release: 1
+Group: Development/Libraries
+License: BSD
+URL: https://github.com/kkos/oniguruma
+SCM: https://github.com/kkos/oniguruma
+Macros:
+    - 'short_name;onig'
+Sources:
+    - '%{short_name}-%{version}.tar.gz'
+#Requires:
+#    - ^^^
+PkgBR:
+    - cmake
+#PkgConfigBR:
+#    - ^^^
+SetupOptions: '-q -n %{short_name}-%{version}'
+
+NoFiles: true
+
+SubPackages:
+    - Name:  devel
+      Summary:    Development files for %{name}
+      Group:      Development/Libraries
+      AutoDepend: false
+      Requires:
+        - '%{name}-libs = %{version}'
+      Files:
+        - '%{_bindir}/onig-config'
+        - '%{_includedir}/oniggnu.h'
+        - '%{_includedir}/oniguruma.h'
+        - '%{_libdir}/libonig.so'
+        - '%{_libdir}/pkgconfig/oniguruma.pc'
+    - Name:  libs
+      Summary: A modern and flexible regular expressions library
+      Group:      Development/Libraries
+      AutoDepend: false
+      Files:
+        - '%{_libdir}/libonig.so.*'
+# Please replace all "^^^" with valid values, and cleanup this comment line.
