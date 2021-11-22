@@ -11,7 +11,7 @@ Sources:
 #Requires:
 #    - ^^^
 PkgBR:
-    - cmake
+    - autoconf
 #PkgConfigBR:
 #    - ^^^
 SetupOptions: '-q -n %{name}-%{version}/upstream'

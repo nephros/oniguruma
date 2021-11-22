@@ -16,7 +16,7 @@ License:    BSD
 URL:        https://github.com/kkos/oniguruma
 Source0:    %{name}-%{version}.tar.gz
 Source100:  oniguruma.yaml
-BuildRequires:  cmake
+BuildRequires:  autoconf
 
 %description
 %{summary}.
@@ -46,6 +46,7 @@ Requires(postun): /sbin/ldconfig
 
 %build
 # >> build pre
+autoreconf -vfi
 # << build pre
 
 %configure --disable-static
